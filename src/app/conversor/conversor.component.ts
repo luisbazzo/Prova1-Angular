@@ -22,6 +22,31 @@ converter(){
 }
 
 selecionarMoeda(moeda : number, campo : number){
-  this.textBtn1 += "Euro";
+  let moedaEscolhida : string = "";
+
+  if(moeda == 1){
+    moedaEscolhida = "Dólar";
+  }
+  else if(moeda == 2){
+    moedaEscolhida = "Euro";
+  }
+  else if(moeda == 3){
+    moedaEscolhida = "Real";
+  }
+  else if(moeda == 4){
+    moedaEscolhida = "Peso Argentino";
+  }
+  else{
+    alert('Erro de seleção de moeda');
+  }
+
+  if(campo == 1){
+    this.textBtn1 = "Moeda de conversão: ";
+    this.textBtn1 += moedaEscolhida;
+  }
+  else{
+    this.textBtn2 = "Moeda convertida: ";
+    this.textBtn2 += moedaEscolhida;
+  }
 }
 }

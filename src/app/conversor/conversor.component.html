@@ -4,7 +4,7 @@
   <form>
     <div class="mb-5">
       <p>
-        <input type="text" style="border: none;" name="textBtn1" [value]="textBtn1" readonly>
+        <input type="text" style="border: none; display: block; width: 100%; margin-bottom: 10px;" name="textBtn1" [value]="textBtn1" readonly>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Converter de...
         </button>
@@ -12,9 +12,9 @@
       <div class="collapse" id="collapseExample">
         <ul class="list-group mb-3" style="cursor: pointer;">
           <li class="list-group-item" (click)="selecionarMoeda(1, 1)">Dólar</li>
-          <li class="list-group-item">Euro</li>
-          <li class="list-group-item">Real</li>
-          <li class="list-group-item">Peso Argentino</li>
+          <li class="list-group-item" (click)="selecionarMoeda(2, 1)">Euro</li>
+          <li class="list-group-item" (click)="selecionarMoeda(3, 1)">Real</li>
+          <li class="list-group-item" (click)="selecionarMoeda(4, 1)">Peso Argentino</li>
         </ul>
       </div>
       <input type="text" name="valorConverter" [(ngModel)]="valorConverter" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -23,7 +23,7 @@
     </div>
     <div class="mb-5">
       <p>
-        <input type="text" style="border: none;" name="textBtn2" [value]="textBtn2" readonly>
+        <input type="text" style="border: none; display: block; width: 100%; margin-bottom: 10px;" name="textBtn2" [value]="textBtn2" readonly>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
           Converter para...
         </button>
@@ -38,6 +38,6 @@
       </div>
       <input type="text" name="valorConvertido" [value] = "valorConvertido" class="form-control mt-2" id="exampleInputPassword1" readonly>
     </div>
-    <button class="btn btn-primary">Converter</button>
+    <button class="btn btn-primary" (click)="converter()">Converter</button>
   </form>
 </div>
