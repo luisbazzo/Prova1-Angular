@@ -4,41 +4,39 @@
   <form>
     <div class="mb-5">
       <label for="exampleInputEmail1" class="form-label">Valor a ser convertido</label>
-      <p>
+      <p style="display: inline-block; margin-left: 2%;">
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Converter para...
+          Converter de...
         </button>
       </p>
       <div class="collapse" id="collapseExample">
-        <ul class="list-group">
+        <ul class="list-group mb-3" style="cursor: pointer;">
           <li class="list-group-item">Dólar</li>
           <li class="list-group-item">Euro</li>
           <li class="list-group-item">Real</li>
           <li class="list-group-item">Peso Argentino</li>
-          <li class="list-group-item">Yuan chinês</li>
         </ul>
       </div>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="text" name="valorConverter" [(ngModel)]="valorConverter" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp">
       <label for="exampleInputPassword1" class="form-label mt-3">Valor de câmbio</label>
-      <input type="text" class="form-control" id="valorCambio" aria-describedby="valorCambio" readonly>
+      <input type="text" class="form-control" id="valorCambio" aria-describedby="valorCambio" name="valorCambio" [(ngModel)]="valorCambio">
     </div>
     <div class="mb-5">
       <label for="exampleInputPassword1" class="form-label">Valor convertido</label>
-      <p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <p style="display: inline-block; margin-left: 2%;">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
           Converter para...
         </button>
       </p>
-      <div class="collapse" id="collapseExample">
-        <ul class="list-group">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
+      <div class="collapse" id="collapseExample2">
+        <ul class="list-group mb-3" style="cursor: pointer;">
+          <li class="list-group-item">Dólar</li>
+          <li class="list-group-item">Euro</li>
+          <li class="list-group-item">Real</li>
+          <li class="list-group-item">Peso Argentino</li>
         </ul>
       </div>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="text" name="valorConvertido" [value] = "valorConvertido" class="form-control mt-2" id="exampleInputPassword1" readonly>
     </div>
     <button class="btn btn-primary">Converter</button>
   </form>
