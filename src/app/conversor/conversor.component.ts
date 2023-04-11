@@ -10,8 +10,18 @@ valorReal : number = 0.20;
 valorDolar : number = 1;
 valorEuro : number = 1.09;
 valorPesoArgentino : number = 0.0047;
+textBtn1 : string = "Moeda de conversão: ";
+textBtn2 : string = "Moeda convertida: ";
 
 valorCambio : number = 0;
 valorConverter : number = 0;
 valorConvertido : number = 0;
+
+converter(){
+  this.valorConvertido = this.valorConverter * this.valorCambio;
+}
+
+selecionarMoeda(moeda : number, campo : number){
+  this.textBtn1 += "Euro";
+}
 }
